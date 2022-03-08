@@ -26,4 +26,4 @@ def decipher(txt, a, b):
             break
     return cipher(txt, a, b)
 
-print(decipher(cipher("YOUR MOTHER IS A B*TCH", 7, 10), 7, 10))
+print(decipher(cipher("Here we are!", 7, 10), 7, 10))
