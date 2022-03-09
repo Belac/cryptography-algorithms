@@ -55,3 +55,28 @@ TypeError: bad operand type for unary -: 'NoneType'
 so returns a NoneType as inv(10) instead of a positive integer that should be used while
 decrepting*
 
+## Vigenere code
+Here we group the letters by blocks of length k. We then choose a key consisting of k numbers from 0 to 25 (n1, n2, ..., nk). 
+To encode a message we perform a translation whose offset depends on the rank of the letter in the block: an offset of n1 for the first letter of the block, 
+of n2 for the second letter of the block, ..., of nk for the last letter of the block. 
+To decode such a cryptogram, it is enough to make backward shifts.
+
+### Sample tests
+*Encoding*
+
+Test : Using the word CRITERIA as key.
+Note : Instead of CRITERIA, we can use (2, 17, 8, 19, 4, 17, 8, 0)
+
+````
+>>> print(cipher('This is an important information! Keep it secret!', 'CRITERIA'))
+>>> Vyql mj in kdxhvkinv zvysiuavzwg! Ovmp kk axgimt!
+````
+
+
+*Decoding*
+
+Test : Using the same word as key (CRITERIA).
+````
+>>> print(decipher('Vyql mj in kdxhvkinv zvysiuavzwg! Ovmp kk axgimt!', 'CRITERIA'))
+>>> This is an important information! Keep it secret!
+````
