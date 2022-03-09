@@ -40,8 +40,7 @@ Test 1 : Using the couple (7, 10) as key.
 Test 2 : Using the couple (10, 7) as key.
 ````
 >>> print(decipher('Pzjf jf hh jxbrvphhp jhfrvxhpjrh! Dvvb jp fvbvvp!', 10, 7))
-*TypeError: bad operand type for unary -: 'NoneType'*
-
+TypeError: bad operand type for unary -: 'NoneType'
 ````
 *We have a type error because the function inv() does not find any inverse for 10 in base 26,
 so returns a NoneType as inv(10) instead of a positive integer that should be used while
