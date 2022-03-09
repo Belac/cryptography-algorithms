@@ -13,4 +13,5 @@ The decoding formula is m = a'(c − b) mod 26 where a' is the inverse mod 26 of
 *Encoding*
 Test 1 : Using the couple (7, 10) as key.
 Note : That key is a good one because 7 is prime with 26 (gcd(7, 26) == 1).
-````
+````print(cipher('This is an important information! Keep it secret!', 7, 10))
+Nhog og kx oqleznkxn oxtezqknoex! Cmml on gmyzmn!````
