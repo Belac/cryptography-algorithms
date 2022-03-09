@@ -7,7 +7,7 @@ A: 0 - B: 1 - C: 2 - ... - Y: 24 - Z: 25*
 
 ## Getting started
 To test an algorithm among the following one, you firstly have to execute the following comamand :
-> git clone https://github.com/Belac/cryptography-algorithms.git
+> git clone https://github.com/Belac/cryptography-algorithms.git          
 Then, if you're in python interpreter, to call a particular algorithm, you just need to import it like:
 ````
 >>> from affine_code import *
