@@ -5,6 +5,11 @@ Here are some algorithmic programs written in python language to encrypt plain t
 As we only have 26 alphabetic characters, we are in the base 26 where values are like :
 A: 0 - B: 1 - C: 2 - ... - Y: 24 - Z: 25*
 
+## Getting started
+To test an algorithm among the following one, you firstly have to [download cryptography alogorithms] (git clone https://github.com/Belac/cryptography-algorithms.git).
+Then, if you're in python interpreter, call a particular algorithm like:
+>>> from affine_code import *
+
 ## Affine code
 The encoding formula is c = am + b mod 26. Here the key is the couple (a; b). 
 The decoding formula is m = a'(c − b) mod 26 where a' is the inverse mod 26 of a (a x a' = 1 mod 26); this implies that a and 26 must be prime between them.
