@@ -6,9 +6,12 @@ As we only have 26 alphabetic characters, we are in the base 26 where values are
 A: 0 - B: 1 - C: 2 - ... - Y: 24 - Z: 25*
 
 ## Getting started
-To test an algorithm among the following one, you firstly have to [download cryptography alogorithms] (git clone https://github.com/Belac/cryptography-algorithms.git).
-Then, if you're in python interpreter, call a particular algorithm like:
+To test an algorithm among the following one, you firstly have to execute the following comamand :
+> git clone https://github.com/Belac/cryptography-algorithms.git
+Then, if you're in python interpreter, to call a particular algorithm, you just need to import it like:
+````
 >>> from affine_code import *
+````
 
 ## Affine code
 The encoding formula is c = am + b mod 26. Here the key is the couple (a; b). 
