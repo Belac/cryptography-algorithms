@@ -1,29 +1,31 @@
-from math import gcd
 import string
 
-def phi(n):
-    value = 0
-    for i in range(1, n):
-        value += gcd(i, n) == 1
-    return value
+cap_letters = string.ascii_uppercase
+tin_letters = string.ascii_lowercase
 
-def cipher(txt, a, b):
-    txt = txt.upper()
-    letters = string.ascii_uppercase
-    _txt = ''
-    for char in txt:
-        if char.isalpha():
-            _txt += letters[(a * letters.index(char) + b) % 26]
+
+def inv(n, base=26):
+    """This function is set to get the inverse of n in a certain base"""
+    for i in range(1, base):
+        if (n * i) % base == 1:
+            return i
+
+
+def cipher(text, a, b):
+    _text = ''
+    for char in text:
+        if char in cap_letters:
+            _text += cap_letters[(a * cap_letters.index(char) + b) % 26]
+        elif char in tin_letters:
+            _text += tin_letters[(a * tin_letters.index(char) + b) % 26]
         else:
-            _txt += char
-    return _txt
+            _text += char
+    return _text
 
-def decipher(txt, a, b):
-    for i in range(1, 26):
-        if (a * i) % 26 == 1:
-            a = i
-            b *= -a
-            break
-    return cipher(txt, a, b)
 
-print(decipher(cipher("Here we are!", 7, 10), 7, 10))
+def decipher(text, a, b):
+    _text = ''
+    _a = inv(a)
+    _b = (-_a * b) % 26
+    _text = cipher(text, _a, _b)
+    return _text
