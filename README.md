@@ -80,3 +80,28 @@ Test : Using the same word as key (CRITERIA).
 >>> print(decipher('Vyql mj in kdxhvkinv zvysiuavzwg! Ovmp kk axgimt!', 'CRITERIA'))
 >>> This is an important information! Keep it secret!
 ````
+
+## Atbash cipher
+The Atbash cipher is a method of substitution cryptography which consists of replacing each letter by first counting its place in the alphabet, 
+and replacing it with the letter occupying the same place, but from the end of the alphabet . 
+Thus, by applying it with our alphabet, we replace an A by a Z, a B by a Y, and so.
+For this reason, it is also called mirror code. In particular, exactly the same method is applied to encrypt and to decrypt a message
+
+### Sample tests
+*Encoding*
+
+Test : Coding "You deserve someone who is terrified of losing you."
+
+````
+>>> print(cipher('You deserve someone who is terrified of losing you.'))
+>>> Blf wvhviev hlnvlmv dsl rh gviirurvw lu olhrmt blf.
+````
+
+
+*Decoding*
+
+Test : Decoding "Gsvb glow nv R xlfowm'g. Gszg'h dsb R wrw rg."
+````
+>>> print(decipher("Gsvb glow nv R xlfowm'g. Gszg'h dsb R wrw rg."))
+>>> They told me I couldn't. That's why I did it.
+````
